@@ -1,0 +1,172 @@
+/**
+ * Created by acer on 2017/4/10.
+ */
+myModule
+    .service('infoService',function(){
+        var nbaStar = {
+            "name":"勒布朗·詹姆斯",
+            "label":"超级巨星",
+            "description":"勒布朗·詹姆斯在2003年NBA选秀中于首轮第1顺位被克利夫兰骑士队选中。2003-2010年，詹姆斯效力于骑士队，期间2次当选NBA最有价值球（MVP）。2010年，詹姆斯转会至迈阿密热火队，" +
+            "与德怀恩·韦德以及克里斯·波什组成“三巨头”阵容。2012年，詹姆斯得到NBA个人生涯的第3座常规赛MVP，第1个总冠军和总决赛MVP。詹姆斯代表美国男篮获得了2012年伦敦奥运会金牌，追平了迈克尔·乔丹" +
+            "在1992年所创的纪录。2013年，詹姆斯获得第4个常规赛MVP、第2个NBA总冠军和第2个总决赛MVP，实现两连冠。2014年，" +
+            "詹姆斯回归骑士，与凯里·欧文、凯文·乐福组成“三巨头”阵容。2016年，詹姆斯带领骑士逆转战胜卫冕冠军勇士获得队史首个总冠军和个人第3个总决赛MVP"
+        };
+
+        this.getStarInfo = function(){
+            return nbaStar;
+        }
+})
+    .service('dataService',function(){
+        var seasonDatas = [
+            {
+                metaDatas:[
+                    '总决赛成绩',
+                    '得分',
+                    '篮板',
+                    '助攻',
+                    '抢断',
+                    '盖帽'
+                ]
+            },
+            {
+
+                title:"16-17赛季",
+                games:[
+                    {
+                        game:'第一场',
+                        score:23,
+                        rebound:12,
+                        assist:9,
+                        steal:2,
+                        block:1
+                    },
+                    {
+                        game:'第二场',
+                        score:19,
+                        rebound:8,
+                        assist:9,
+                        steal:4,
+                        block:1
+                    },
+                    {
+                        game:'第三场',
+                        score:32,
+                        rebound:11,
+                        assist:6,
+                        steal:2,
+                        block:2
+                    },
+                    {
+                        game:'第四场',
+                        score:25,
+                        rebound:13,
+                        assist:9,
+                        steal:3,
+                        block:2
+                    },
+                    {
+                        game:'第五场',
+                        score:41,
+                        rebound:16,
+                        assist:7,
+                        steal:1,
+                        block:3
+                    }
+                ],
+            },
+            {
+                title:"15-16赛季",
+                games:[
+                    {
+                        game:'第一场',
+                        score:26,
+                        rebound:8,
+                        assist:9,
+                        steal:2,
+                        block:2
+                    },
+                    {
+                        game:'第二场',
+                        score:32,
+                        rebound:10,
+                        assist:9,
+                        steal:5,
+                        block:1
+                    },
+                    {
+                        game:'第三场',
+                        score:22,
+                        rebound:11,
+                        assist:4,
+                        steal:3,
+                        block:2
+                    },
+                    {
+                        game:'第四场',
+                        score:25,
+                        rebound:13,
+                        assist:9,
+                        steal:3,
+                        block:2
+                    },
+                    {
+                        game:'第五场',
+                        score:28,
+                        rebound:16,
+                        assist:7,
+                        steal:1,
+                        block:3
+                    }
+                ],
+            },
+            {
+                title:"14-15赛季",
+                games:[
+                    {
+                        game:'第一场',
+                        score:28,
+                        rebound:10,
+                        assist:9,
+                        steal:2,
+                        block:2
+                    },
+                    {
+                        game:'第二场',
+                        score:35,
+                        rebound:11,
+                        assist:9,
+                        steal:5,
+                        block:1
+                    },
+                    {
+                        game:'第三场',
+                        score:18,
+                        rebound:11,
+                        assist:4,
+                        steal:3,
+                        block:2
+                    },
+                    {
+                        game:'第四场',
+                        score:25,
+                        rebound:13,
+                        assist:9,
+                        steal:3,
+                        block:2
+                    },
+                    {
+                        game:'第五场',
+                        score:28,
+                        rebound:16,
+                        assist:7,
+                        steal:1,
+                        block:3
+                    }
+                ],
+            }
+        ];
+
+        this.getSeasonData = function(){
+            return seasonDatas;
+        }
+})

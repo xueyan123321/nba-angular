@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nbaStarApp">
+<head>
+    <meta charset="UTF-8">
+    <title>nbaStar</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/nbaStar.css">
+</head>
+<body>
+    <div class="intro container" ng-controller="NbaStarController">
+        <div class="media col-xs-12">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object img-thumbnail" src="image/James.jpeg" alt="james">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{starInfo.name}} <span class="label label-danger">{{starInfo.label}}</span> </h4>
+                <p>{{starInfo.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="season container" ng-controller="DataController">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+
+            <li role="presentation"><a href="#season14-15" aria-controls="profile" role="tab" data-toggle="tab">{{seasonDatas[3].title}}</a></li>
+            <li role="presentation"><a href="#season15-16" aria-controls="messages" role="tab" data-toggle="tab">{{seasonDatas[2].title}}</a></li>
+            <li role="presentation"><a href="#season16-17" aria-controls="settings" role="tab" data-toggle="tab">{{seasonDatas[1].title}}</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="season14-15">
+                <table class="table table-striped">
+                    <tr>
+                        <th ng-repeat="metaData in seasonDatas[0].metaDatas">
+                            {{metaData}}
+                        </th>
+                    </tr>
+                    <tr ng-repeat="data in seasonDatas[1].games">
+                        <th>{{data.game}}</th>
+                        <td>{{data.score}}</td>
+                        <td>{{data.rebound}}</td>
+                        <td>{{data.assist}}</td>
+                        <td>{{data.steal}}</td>
+                        <td>{{data.block}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="season15-16">
+                <table class="table table-striped">
+                    <tr>
+                        <th ng-repeat="metaData in seasonDatas[0].metaDatas">
+                            {{metaData}}
+                        </th>
+                    </tr>
+                    <tr ng-repeat="data in seasonDatas[2].games">
+                        <th>{{data.game}}</th>
+                        <td>{{data.score}}</td>
+                        <td>{{data.rebound}}</td>
+                        <td>{{data.assist}}</td>
+                        <td>{{data.steal}}</td>
+                        <td>{{data.block}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="season16-17">
+                <table class="table table-striped">
+                    <tr>
+                        <th ng-repeat="metaData in seasonDatas[0].metaDatas">
+                            {{metaData}}
+                        </th>
+                    </tr>
+                    <tr ng-repeat="data in seasonDatas[3].games">
+                        <th>{{data.game}}</th>
+                        <td>{{data.score}}</td>
+                        <td>{{data.rebound}}</td>
+                        <td>{{data.assist}}</td>
+                        <td>{{data.steal}}</td>
+                        <td>{{data.block}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/controllers.js"></script>
+    <script src="./scripts/services.js"></script>
+</html>
